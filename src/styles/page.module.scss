@@ -1,0 +1,68 @@
+@import "./variables.module.scss";
+
+.company_banner{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    .title_box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title{
+            font-size: clamp(1.2rem, 1.5vw, 2rem);
+            color: $green_text_color;
+            font-weight: 800;
+        }   
+    }
+    .banner{
+        position: relative;
+        border-radius: 5px;
+        width: 100%;
+        min-height: 250px;
+        display: flex;
+        overflow: hidden;
+
+        .banner_img{
+            position: relative;
+            border-radius: 5px;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            min-height: 180px;
+            overflow: hidden;
+            .cover{
+                z-index: 10;
+                height: 100%;
+                flex-grow: .3;
+                background-color: #ffffffB3;
+                clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: clamp(1rem, 3vw, 3rem);
+                font-weight: 800;
+                color: black;
+            }
+        }
+
+        .dp{
+            position: absolute;
+            padding: .5rem;
+            display: flex;
+            gap: 1rem;
+            left: 1rem;
+            bottom: 10px;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border-radius: 5px;
+            z-index: 10;
+            display: flex;
+            
+        }
+    }
+}
