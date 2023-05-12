@@ -1,40 +1,43 @@
 @import "./variables.module.scss";
 
-.tab_container{
-    margin-top: 1rem;
-    width: 100%;
-    flex-direction: column;
+.tab_container {
+  margin-top: 2rem;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+
+  .tabList {
     display: flex;
-    position: relative;
+    width: 100%;
+    gap: 0.5rem;
+    align-items: center;
+    border-bottom: $tab_border;
 
-    .tabList {
-        display: flex;
-        width: 100%;
-        gap: .5rem;
-        align-items: center;
-        border-bottom: $tab_border ;
-
-        .tabName {
-            border-radius: 5px 5px 0 0;
-            border: $tab_border;
-            padding: 1rem;
-            font-size: .9rem;
-            font-weight: 400;
-            color: var(--inactiveText);
-            padding-bottom: 0.9rem;
-            transition: all .3s;
-            &:last-child{
-                margin-left: auto
-            }
-        }
-
-        .activeTab {
-            font-size: .9rem;
-            font-weight: bold;
-            color: $active_text_color;
-            background: white;
-        }
+    .tabName {
+      border-radius: 5px 5px 0 0;
+      border: $tab_border;
+      padding: 0.5rem 1rem;
+      font-size: clamp(0.8rem, 1vw, 1rem);
+      font-weight: 700;
+      color: $inActive_text_color;
+      transition: all 0.3s;
+      &:last-child {
+        margin-left: auto;
+      }
+      &:hover {
+        cursor: pointer;
+      }
     }
 
+    .activeTab {
+      color: $active_text_color;
+      background: white;
+    }
+  }
 
+  .tabBody {
+    width: 100%;
+    height: 100%;
+  }
 }

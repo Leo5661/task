@@ -1,8 +1,7 @@
 @import "./variables.module.scss";
 
 .ToolBar {
-    display: flex;
-    border-radius: 5px;
-    border: $toolBar_border;
-
+  display: flex;
+  border-radius: 5px;
+  border: $toolBar_border;
 }

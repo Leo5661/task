@@ -1,0 +1,43 @@
+@import "./variables.module.scss";
+
+.overview_container {
+  .overview_title_bar {
+    display: flex;
+
+    .title {
+      flex-grow: 1;
+      font-size: clamp(1rem, 1.3vw, 2rem);
+      font-weight: 700;
+      color: $scope_title_color;
+    }
+
+    .tool_bar {
+      border-radius: 5px;
+      border: $tab_border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .divider {
+        height: 90%;
+        width: 2px;
+        border: $tab_border;
+        border-radius: 5px;
+      }
+      .img_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 30px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .pdf_container {
+    padding-top: 1rem;
+    width: 100%;
+    height: 500px;
+  }
+}

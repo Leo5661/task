@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { TabMenu } from "@/dataSets/TabList";
-import style from "@/styles/tabContainer.module.scss";
-import BasicInfo from "@/tabs/BasicInfo";
+import { SideTabMenu } from "@/dataSets/TabList";
+import style from "@/styles/sideTab.module.scss";
+import Overview from "@/tabs/Overview";
 
-function TabContainer() {
+function SideTab() {
   const [activeTab, setActiveTab] = useState<number>(0);
 
   const handelTabClick = (index: number) => {
@@ -13,9 +13,9 @@ function TabContainer() {
   };
 
   return (
-    <div className={style.tab_container}>
+    <div className={style.side_tab_container}>
       <div className={style.tabList}>
-        {TabMenu.map((item, index) => {
+        {SideTabMenu.map((item, index) => {
           return (
             <div
               key={index}
@@ -33,7 +33,7 @@ function TabContainer() {
         {(() => {
           switch (activeTab) {
             case 0:
-              return <BasicInfo />;
+              return <Overview />;
             default:
               return <div>{`This is tab ${activeTab}`}</div>;
           }
@@ -43,4 +43,4 @@ function TabContainer() {
   );
 }
 
-export default TabContainer;
+export default SideTab;

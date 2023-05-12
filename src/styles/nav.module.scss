@@ -1,27 +1,27 @@
 @import "./variables.module.scss";
 
-.nav{
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: $nav_border;
+  padding: 0.5rem 0rem;
+
+  .logo {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    border-bottom: $nav_border;
-    padding: 0.5rem 0rem;
+    align-self: stretch;
+  }
 
-    .logo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-self: stretch;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    li {
+      list-style-type: none;
     }
-
-    ul{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-
-        li{
-            list-style-type: none;
-        }
-    }
+  }
 }

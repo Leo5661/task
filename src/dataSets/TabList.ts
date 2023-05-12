@@ -5,3 +5,12 @@ export const TabMenu: string[] = [
   "Contact",
   "Internal Actions",
 ];
+
+export const SideTabMenu: string[] = [
+  "Overview",
+  "Welcome",
+  "Product Capabilities",
+  "Customer Success Stories",
+  "File Sharing",
+  "Our Deck",
+];

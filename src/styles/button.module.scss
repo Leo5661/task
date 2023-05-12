@@ -1,9 +1,9 @@
 @import "./variables.module.scss";
 
-.active_button{
-    padding: .5rem 1rem;
-    border-radius: 5px;
-    color: white;
-    font-size: clamp(.8rem, 1vw, 1rem);
-    background-color: $green_button_color;
+.active_button {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: white;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  background-color: $green_button_color;
 }

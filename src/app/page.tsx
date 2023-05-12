@@ -26,8 +26,8 @@ export default function Home() {
             <Image src="/salesforce.png" alt="we logo" width={60} height={60} />
           </div>
         </div>
-        <div className="scope">
-          <div className="scope_title">Project Scope Recap</div>
+        <div className={style.scope}>
+          <div className={style.scope_title}>Project Scope Recap</div>
           <TabContainer />
         </div>
       </div>
