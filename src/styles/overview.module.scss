@@ -1,6 +1,13 @@
 @import "./variables.module.scss";
 
 .overview_container {
+  .divider {
+    height: 90%;
+    width: 2px;
+    border: $tab_border;
+    border-radius: 5px;
+  }
+
   .overview_title_bar {
     display: flex;
 
@@ -17,12 +24,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      .divider {
-        height: 90%;
-        width: 2px;
-        border: $tab_border;
-        border-radius: 5px;
-      }
+
       .img_container {
         display: flex;
         justify-content: center;
@@ -39,5 +41,15 @@
     padding-top: 1rem;
     width: 100%;
     height: 500px;
+    display: flex;
+    flex-direction: column;
+
+    .footer {
+      width: 100%;
+      height: 25px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
   }
 }
