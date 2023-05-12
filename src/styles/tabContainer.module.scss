@@ -1,0 +1,40 @@
+@import "./variables.module.scss";
+
+.tab_container{
+    margin-top: 1rem;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+
+    .tabList {
+        display: flex;
+        width: 100%;
+        gap: .5rem;
+        align-items: center;
+        border-bottom: $tab_border ;
+
+        .tabName {
+            border-radius: 5px 5px 0 0;
+            border: $tab_border;
+            padding: 1rem;
+            font-size: .9rem;
+            font-weight: 400;
+            color: var(--inactiveText);
+            padding-bottom: 0.9rem;
+            transition: all .3s;
+            &:last-child{
+                margin-left: auto
+            }
+        }
+
+        .activeTab {
+            font-size: .9rem;
+            font-weight: bold;
+            color: $active_text_color;
+            background: white;
+        }
+    }
+
+
+}

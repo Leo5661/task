@@ -1,5 +1,6 @@
 import ActiveButton from "@/components/ActiveButton";
 import Nav from "@/components/Nav";
+import TabContainer from "@/components/TabContainer";
 import style from "@/styles/page.module.scss";
 import Image from "next/image";
 
@@ -25,7 +26,10 @@ export default function Home() {
             <Image src="/salesforce.png" alt="we logo" width={60} height={60} />
           </div>
         </div>
-        <div className="scope"></div>
+        <div className="scope">
+          <div className="scope_title">Project Scope Recap</div>
+          <TabContainer />
+        </div>
       </div>
     </main>
   );
