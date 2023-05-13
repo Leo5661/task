@@ -1,3 +1,4 @@
+import ActionPlan from "@/components/ActionPlan";
 import ActiveButton from "@/components/ActiveButton";
 import Nav from "@/components/Nav";
 import TabContainer from "@/components/TabContainer";
@@ -32,10 +33,13 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className={style.scope}>
-            <div className={style.scope_title}>Project Scope Recap</div>
-            <TabContainer />
+        </div>
+        <div className={style.scope}>
+          <div className={style.scope_title}>
+            <div className={style.title}>Project Scope Recap</div>
+            <ActionPlan value={3} />
           </div>
+          <TabContainer />
         </div>
       </div>
     </main>
