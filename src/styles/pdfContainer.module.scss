@@ -1,0 +1,77 @@
+@import "./variables.module.scss";
+
+.pdf_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+  .pdf_tool_bar {
+    position: absolute;
+    z-index: 10;
+    border-radius: 5px;
+    border: $tab_border;
+    display: flex;
+    height: 35px;
+    top: 10px;
+    background: #ffffff80;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+
+    .divider {
+      height: 90%;
+      width: 2px;
+      border: $tab_border;
+      border-radius: 5px;
+    }
+
+    .img_container {
+      display: flex;
+      justify-content: center;
+      margin: 0 1rem;
+      align-items: center;
+      &:hover {
+        cursor: pointer;
+      }
+      .page {
+        padding: 0 0.3rem;
+        font-size: clamp(0.4rem, 0.5vw, 0.6rem);
+      }
+    }
+  }
+
+  .pdf_img {
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    img {
+      border-radius: 5px;
+    }
+
+    .cover {
+      background-color: #ffffff80;
+      padding: 2rem;
+      position: absolute;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .title {
+        font-size: 3rem;
+        font-weight: 800;
+      }
+      .sub_title {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
