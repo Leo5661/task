@@ -10,7 +10,7 @@
     align-items: baseline;
     justify-content: space-between;
     .action_title {
-      font-size: clamp(0.6rem, 1vw, 0.8rem);
+      font-size: clamp(0.7rem, 0.5vw, 0.8rem);
       font-weight: 400;
       color: $action_title_color;
     }

@@ -47,3 +47,11 @@
     flex-grow: 1;
   }
 }
+
+@include tabs() {
+  .side_tab_container {
+    .tabList {
+      display: none;
+    }
+  }
+}

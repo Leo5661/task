@@ -13,3 +13,16 @@ $scope_title_color: #233735;
 $action_title_color: #7b8786;
 $action_bar_bg_color: #d3d7d7;
 $action_bar_fg_color: #00b686;
+
+//mixins
+@mixin tabs {
+  @media (max-width: 780px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}

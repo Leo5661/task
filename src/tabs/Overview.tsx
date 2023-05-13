@@ -35,6 +35,16 @@ function Overview() {
             />
           </div>
         </div>
+        <div className={style.three_dot_menu}>
+          <div className={style.img_container}>
+            <Image
+              src="./three_dot.svg"
+              alt="download tool"
+              width={10}
+              height={16}
+            />
+          </div>
+        </div>
       </div>
       <div className={style.pdf_container}>
         <PdfContainer />

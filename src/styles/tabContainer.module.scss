@@ -11,14 +11,17 @@
     display: flex;
     width: 100%;
     gap: 0.5rem;
-    align-items: center;
+    align-items: flex-end;
     border-bottom: $tab_border;
 
     .tabName {
+      align-self: stretch;
+      display: flex;
+      flex-wrap: nowrap;
       border-radius: 5px 5px 0 0;
       border: $tab_border;
       padding: 0.5rem 1rem;
-      font-size: clamp(0.8rem, 1vw, 1rem);
+      font-size: clamp(0.7rem, 1vw, 1rem);
       font-weight: 700;
       color: $inActive_text_color;
       transition: all 0.3s;
@@ -39,5 +42,17 @@
   .tabBody {
     width: 100%;
     height: 100%;
+  }
+}
+
+@include mobile() {
+  .tab_container {
+    .tabList {
+      .tabName {
+        &:last-child {
+          display: none;
+        }
+      }
+    }
   }
 }

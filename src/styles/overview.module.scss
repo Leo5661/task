@@ -36,12 +36,17 @@
         }
       }
     }
+
+    .three_dot_menu {
+      display: none;
+    }
   }
   .pdf_container {
     padding-top: 1rem;
     width: 100%;
     gap: 1rem;
-    height: 600px;
+    aspect-ratio: 3/2;
+    max-height: 600px;
     display: flex;
     flex-direction: column;
 
@@ -72,6 +77,19 @@
           border-radius: 50%;
           background-color: green;
         }
+      }
+    }
+  }
+}
+
+@include mobile() {
+  .overview_container {
+    .overview_title_bar {
+      .tool_bar {
+        display: none;
+      }
+      .three_dot_menu {
+        display: block;
       }
     }
   }

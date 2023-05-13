@@ -23,9 +23,16 @@ export default function Home() {
               </div>
             </div>
             <div className={style.dp}>
-              <Image src="/we.png" alt="we logo" width={60} height={60} />
-              <Image src="/sum.svg" alt="we logo" width={20} height={60} />
               <Image
+                className={style.corp_img}
+                src="/we.png"
+                alt="we logo"
+                width={60}
+                height={60}
+              />
+              <Image src="/sum.svg" alt="we logo" width={20} height={20} />
+              <Image
+                className={style.corp_img}
                 src="/salesforce.png"
                 alt="we logo"
                 width={60}

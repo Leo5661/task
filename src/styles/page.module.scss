@@ -28,7 +28,8 @@
       position: relative;
       border-radius: 5px;
       width: 100%;
-      min-height: 250px;
+      aspect-ratio: 3/1;
+      max-height: 250px;
       display: flex;
       overflow: hidden;
 
@@ -68,6 +69,10 @@
         border-radius: 5px;
         z-index: 10;
         display: flex;
+        .corp_img {
+          width: 80px;
+          height: 80px;
+        }
       }
     }
   }
@@ -81,6 +86,36 @@
         font-size: clamp(1rem, 1.3vw, 2rem);
         font-weight: 700;
         color: $scope_title_color;
+      }
+    }
+  }
+}
+
+@include tabs() {
+  .body {
+    .company_banner {
+      .banner {
+        .dp {
+          .corp_img {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile() {
+  .body {
+    .company_banner {
+      .banner {
+        .dp {
+          .corp_img {
+            width: 40px;
+            height: 40px;
+          }
+        }
       }
     }
   }

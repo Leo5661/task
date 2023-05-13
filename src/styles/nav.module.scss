@@ -1,5 +1,26 @@
 @import "./variables.module.scss";
 
+.badge {
+  z-index: 10;
+  position: absolute;
+  display: flex;
+  padding: 3px;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+  color: white;
+  top: -5px;
+  right: -6px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.no_badge {
+  display: none;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -24,26 +45,85 @@
 
     li {
       position: relative;
-      width: 30px;
-      height: 30px;
 
-      .badge {
-        z-index: 10;
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 0.7rem;
-        color: white;
-        top: -5px;
-        right: 5px;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: red;
-      }
       cursor: pointer;
       list-style-type: none;
+    }
+  }
+
+  .hamburger {
+    width: 30px;
+    height: 30px;
+    display: none;
+  }
+}
+
+.mobile_menu {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: white;
+  .menu_list {
+    margin-top: 2rem;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    .user {
+      display: flex;
+      gap: 0.5rem;
+      padding: 1rem 0;
+      align-items: center;
+      border-bottom: $tab_border;
+      .user_pic {
+        border-radius: 50%;
+      }
+      .userdetails {
+        display: flex;
+        flex-direction: column;
+        .name {
+          font-size: 1rem;
+          font-weight: 700;
+        }
+        .designation {
+          font-size: 0.8rem;
+          font-weight: 400;
+        }
+      }
+    }
+    .menu {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: $tab_border;
+      &:hover {
+        cursor: pointer;
+      }
+      .item_icon {
+        position: relative;
+      }
+      .item_name {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.show_mobile_menu {
+  display: flex;
+}
+
+@include mobile() {
+  .nav {
+    ul {
+      display: none;
+    }
+    .hamburger {
+      display: block;
     }
   }
 }
