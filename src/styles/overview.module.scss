@@ -52,6 +52,27 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
+
+      .with_badge {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        .badge {
+          z-index: 10;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 0.7rem;
+          color: white;
+          top: -5px;
+          right: 2px;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: green;
+        }
+      }
     }
   }
 }

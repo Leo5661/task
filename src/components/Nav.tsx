@@ -19,6 +19,7 @@ function Nav() {
             />
           </li>
           <li>
+            <div className={style.badge}>4</div>
             <Image src="./inbox.svg" alt="inbox icon" width={20} height={20} />
           </li>
           <li>

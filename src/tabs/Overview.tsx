@@ -39,7 +39,10 @@ function Overview() {
       <div className={style.pdf_container}>
         <PdfContainer />
         <div className={style.footer}>
-          <Image src="chat.svg" alt="chat icon" width={25} height={25} />
+          <div className={style.with_badge}>
+            <div className={style.badge}>2</div>
+            <Image src="chat.svg" alt="chat icon" width={25} height={25} />
+          </div>
           <div className={style.divider}></div>
           <Image src="share.svg" alt="chat icon" width={25} height={25} />
         </div>

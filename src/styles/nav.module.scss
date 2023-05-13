@@ -23,6 +23,25 @@
     gap: 2rem;
 
     li {
+      position: relative;
+      width: 30px;
+      height: 30px;
+
+      .badge {
+        z-index: 10;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.7rem;
+        color: white;
+        top: -5px;
+        right: 5px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: red;
+      }
       cursor: pointer;
       list-style-type: none;
     }
